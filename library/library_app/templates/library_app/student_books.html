@@ -1,0 +1,10 @@
+{% if students_list %}
+    Registered students:
+    <ul>
+    {% for student in students_list %}
+    <li><a href="{% url 'library_app:student-books' student.id %}">{{ student.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No students registered.</p>
+{% endif %}

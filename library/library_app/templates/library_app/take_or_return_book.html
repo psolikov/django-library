@@ -1,0 +1,10 @@
+ <form action="{% url 'library_app:make-operation' %}" method="post">
+  {% csrf_token %}
+  Student id:<br>
+  <input type="text" name="student"><br>
+  Book id:<br>
+  <input type="text" name="book">
+  <br>"take" or "return":<br>
+  <input type="text" name="operation">
+  <input type="submit" value="Submit">
+</form> 
